@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locate Your Station</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar closed">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="locate.html">Locate Your Station</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <button id="toggle-sidebar-btn" onclick="toggleSidebar()">☰</button>
+    <div class="logo">
+      <img src="logo.png " alt="">
+    </div>
+    <h1 style="color: #3d813f; font-weight: bold; text-transform: capitalize;">ChargeNest</h1>
+    
+  <div id="search-bar">
+    <input type="text" id="city-input" placeholder="Search for a city..." oninput="fetchSuggestions()" />
+    <button id="search-btn" onclick="searchLocation()">Search</button>
+    <div id="suggestions"></div>
+  </div>
+  
+  </header>
+
+  <!-- Main Content -->
+  <main class="container1">
+    <!-- Left Half: Map -->
+    <div id="map"></div>
+    <!-- Right Half: Charging Stations List -->
+    <div id="info">
+      <h2>Charging Stations</h2>
+      <ul id="stations-list">
+        <!-- Example Stations -->
+        <li>Station 1 - Location A</li>
+        <li>Station 2 - Location B</li>
+        <li>Station 3 - Location C</li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
